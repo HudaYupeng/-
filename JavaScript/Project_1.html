@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+        /* 布局,使居中 */
+        
+        table {
+            width: 700px;
+            height: 90px;
+            margin: 0 auto;
+        }
+        /* 做表格 */
+        
+        table,
+        th,
+        td {
+            border: 1px solid #333;
+            /* 取消表格的边框  */
+            border-collapse: collapse;
+            /* 使表内的元素居中 */
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>2021年4月消费支出</h2>
+
+    <script>
+        let a1 = prompt('请输入原余额:')
+        let a2 = prompt('请输入花费1:')
+        let a3 = prompt('请输入花费2:')
+        let a4 = prompt('请输入花费3:')
+        let a5 = a1 - a2 - a3 - a4
+            //此时a5从string变成number
+            // 接下来用console检查
+        console.log(typeof a5)
+        console.log(a5)
+        document.write(`<table>
+        <tr>
+            <!-- 表头 -->
+            <th>原余额</th>
+            <th>花费1</th>
+            <th>花费2</th>
+            <th>花费3</th>
+            <th>现在的余额</th>
+        </tr>
+        <tr>
+            <td>${a1}</td>
+            <td>${a2}</td>
+            <td>${a3}</td>
+            <td>${a4}</td>
+            <td>${a5}</td>
+        </tr>
+    </table>`)
+    </script>
+</body>
+
+</html>
